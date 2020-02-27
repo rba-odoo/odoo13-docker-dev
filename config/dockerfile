@@ -1,0 +1,8 @@
+FROM odoo:13.0
+LABEL maintainer="Ronak Baxi<baxi1213@gmail.com>"
+
+USER root
+
+RUN apt-get update && apt-get install python3-xlrd -y && pip3 install cachetools phonenumbers
+
+USER odoo
